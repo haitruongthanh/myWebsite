@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyPortfolio</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="font-nunito">
+    <!-- intro section -->
+    <div
+      class="h-[400px] min-h-[50%] lg:h-screen bg-gradient-to-t from-amber-200 dark:from-slate-800 dark:to-slate-900 relative overflow-hidden"
+    >
+      <!-- navbar -->
+      <nav
+        class="fixed w-full top-0 bg-white dark:bg-slate-900 dark:shadow-slate-600 z-10"
+      >
+        <div
+          class="container mx-auto py-5 px-3 flex justify-between items-center"
+        >
+          <div class="text-2xl font-bold">
+            <span class="mr-3 text-amber-900 dark:text-white drop-shadow-md"
+              ><i class="fa fa-jedi"></i>
+            </span>
+            <span class="text-amber-900 dark:text-white">truonghaidev</span>
+          </div>
+          <ul
+            class="hidden md:flex space-x-10 text-gray-600 dark:text-gray-100 font-bold text-sm uppercase"
+          >
+            <li class="hover text-gray-500">
+              <a href="#">home page</a>
+            </li>
+            <li class="hover text-gray-500">
+              <a href="#about">about me</a>
+            </li>
+            <li class="hover text-gray-500">
+              <a href="#portfolio">works</a>
+            </li>
+            <li class="hover text-gray-500">
+              <a
+                href="https://careerbuilder.vn/cb-vi/truong_thanh_hai_6244952"
+                target="_blank"
+                >CV online</a
+              >
+            </li>
+            <li class="hover text-gray-500">
+              <a href="#contact">contact</a>
+            </li>
+          </ul>
+          <div class="hidden md:block" id="darkMode">
+            <span id="moon" class="text-xl cursor-pointer text-amber-900">
+              <i class="fa fa-moon"></i>
+            </span>
+            <span id="sun" class="text-xl cursor-pointer text-amber-400 hidden">
+              <i class="fa fa-sun"></i>
+            </span>
+          </div>
+          <div id="hamburger" class="space-y-1 md:hidden cursor-pointer z-10">
+            <div class="w-6 h-0.5 bg-black"></div>
+            <div class="w-6 h-0.5 bg-black"></div>
+            <div class="w-6 h-0.5 bg-black"></div>
+          </div>
+          <ul
+            id="menu"
+            class="hidden bg-amber-900 absolute left-0 top-0 w-full p-10 rounded-b-3xl space-y-10 text-white text-center"
+          >
+            <li>
+              <a id="toggleLink" href="#">home page</a>
+            </li>
+            <li>
+              <a id="toggleLink" href="#about">about me</a>
+            </li>
+            <li>
+              <a id="toggleLink" href="#portfolio">works</a>
+            </li>
+            <li>
+              <a
+                href="https://careerbuilder.vn/cb-vi/truong_thanh_hai_6244952"
+                target="_blank"
+                >CV online</a
+              >
+            </li>
+            <li>
+              <a id="toggleLink" href="#contact">contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- intro content -->
+      <!-- image -->
+      <img
+        class="absolute bottom-0 right-0 lg:left-0 mx-auto h-5/6 object-cover"
+        src="./img/man.png"
+        alt=""
+      />
+      <!-- circle -->
+      <div
+        class="hidden lg:block absolute -bottom-1/4 right-0 left-0 mx-auto w-big h-big rounded-full bg-amber-900 dark:bg-slate-600 -z-10"
+      ></div>
+      <!-- animated text -->
+      <div
+        class="absolute top-1/3 left-5 text-xl sm:left-10 sm:text-4xl md:left-1/4 md:text-4xl lg:left-5 xl:left-48 xl:text-7xl font-bold"
+      >
+        <span class="text-gray-600">Front-end Dev</span>
+        <p id="text" class="text-red-500 mt-3"></p>
+      </div>
+      <!-- texts -->
+      <div
+        class="hidden lg:flex flex-col gap-5 rounded-md shadow-lg absolute top-0 bottom-0 m-auto right-10 bg-white dark:bg-slate-900 dark:shadow-slate-700 p-6 h-fit w-1/3"
+      >
+        <h2 class="text-4xl font-bold text-amber-900">Hi, I'm Hai</h2>
+        <p class="text-gray-400">
+          Over the years working at office in the past, I found myself having a
+          passion for information technology and ambition to create valuable
+          applications to make it easy and convenient for people to do their
+          jobs.
+        </p>
+        <a
+          href="#contact"
+          class="text-white bg-amber-600 text-xl px-3 py-2 w-fit rounded-md font-semibold"
+          >Hire me</a
+        >
+      </div>
+    </div>
+
+    <!-- about me -->
+    <div id="about" class="w-full h-fit px-10 dark:bg-slate-900">
+      <div
+        class="container mx-auto flex flex-col-reverse lg:flex-row items-center pt-40 gap-20"
+      >
+        <!-- left -->
+        <div class="relative">
+          <img
+            class="absolute top-0 left-0 h-1/4 -z-10"
+            src="./img/dots.png"
+            alt=""
+          />
+          <div class="h-full rounded-full overflow-hidden">
+            <img src="./img/portrait.png" alt="" />
+          </div>
+        </div>
+        <!-- right -->
+        <div class="my-auto flex flex-col gap-3">
+          <h2 class="text-amber-600 font-bold">ABOUT ME</h2>
+          <h2 class="text-3xl font-medium dark:text-gray-50">
+            Better Practice
+          </h2>
+          <h2 class="text-3xl font-medium dark:text-gray-50">
+            Better Experience
+          </h2>
+          <p class="text-gray-400">
+            After taking the Front-end Foundation class at Cybersoft, I'm glad
+            to be able to create little website that simply provide information.
+          </p>
+
+          <div class="flex flex-wrap gap-6 mt-10">
+            <div class="flex items-center gap-4">
+              <span class="text-6xl text-amber-600"
+                ><i class="fab fa-html5"></i
+              ></span>
+              <span class="text-2xl text-gray-400 font-medium">HTML</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-6xl text-[#1b73ba]"
+                ><i class="fab fa-css3-alt"></i>
+              </span>
+              <span class="text-2xl text-gray-400 font-medium">CSS</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-6xl text-[#f0db4f]"
+                ><i class="fab fa-js-square"></i>
+              </span>
+              <span class="text-2xl text-gray-400 font-medium">JS</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-6xl text-[#CF649A]"
+                ><i class="fab fa-sass"></i>
+              </span>
+              <span class="text-2xl text-gray-400 font-medium">SCSS</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-6xl text-[#7952b3]"
+                ><i class="fab fa-bootstrap"></i>
+              </span>
+              <span class="text-2xl text-gray-400 font-medium">Bootstrap</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-6xl text-amber-600"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 1000 1000"
+                  fill="none"
+                  class="fill-amber-600"
+                >
+                  <path
+                    d="M489.5 226.499C328 231.632 280 346.999 269 409.499C283.333 386.332 328.5 335.5 395 335.5C472.5 335.5 531.5 422 567.5 449C611.237 481.803 699.123 525.115 814.5 490C906.5 462 949.167 364.332 958.5 317.999C914 378.499 846.5 414.838 763 371.999C705.5 342.499 662.5 221 489.5 226.499Z"
+                    fill="#07B6D5"
+                  />
+                  <path
+                    d="M261 500.999C99.5 506.132 51.5 621.499 40.5 683.999C54.8333 660.832 100 610 166.5 610C244 610 303 696.5 339 723.5C382.737 756.303 470.623 799.615 586 764.5C678 736.5 720.667 638.832 730 592.499C685.5 652.999 618 689.338 534.5 646.499C477 616.999 434 495.5 261 500.999Z"
+                    fill="#07B6D5"
+                  />
+                </svg>
+              </span>
+              <span class="text-2xl text-gray-400 font-medium">Tailwind</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-6xl text-[#61dafb]"
+                ><i class="fab fa-react"></i>
+              </span>
+              <span class="text-2xl text-gray-400 font-medium">React</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-6xl text-amber-600">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 256 233"
+                  preserveAspectRatio="xMinYMin meet"
+                >
+                  <g fill="none" fill-rule="evenodd">
+                    <path
+                      d="M.388 0H24.18v157.893h94.087v19.466H.387V0zM183.154 46.503c16.222-2.163 33.526 1.081 46.503 11.896 14.06 9.733 21.63 27.036 22.71 43.258 2.164 19.466 0 38.933-10.814 55.155-9.733 12.977-24.873 21.629-42.177 22.71-16.222 2.163-34.606-1.081-48.665-11.896-12.978-10.814-19.467-27.036-21.63-43.258-2.162-17.304 0-36.77 10.815-51.91 8.652-15.14 25.955-24.874 43.258-25.955zm3.245 18.385c10.814-1.082 22.71 2.162 31.362 9.733 7.57 8.651 11.896 19.466 12.978 30.28 1.081 11.897 0 24.874-5.408 35.689-5.407 10.814-15.14 18.385-27.036 20.547-10.815 2.163-22.71-1.081-30.281-7.57-8.652-6.489-14.059-16.222-16.222-25.955-2.163-14.059-1.081-28.118 4.326-41.095 5.407-11.896 17.303-20.548 30.28-21.63z"
+                      fill="#000"
+                    />
+                    <path
+                      d="M.388 205.477h255.224v27.037H.388v-27.037z"
+                      fill="#3492FF"
+                    />
+                  </g>
+                </svg>
+              </span>
+
+              <span class="text-2xl text-gray-400 font-medium">Lodash</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <span class="text-6xl text-amber-600"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  viewBox="0 0 256 244"
+                  preserveAspectRatio="xMidYMid"
+                >
+                  <path
+                    d="M177.381 169.733c9.447-.978 16.614-9.122 16.288-18.896-.325-9.773-8.47-17.592-18.243-17.592h-.651c-10.1.326-17.918 8.796-17.592 18.895.326 4.887 2.28 9.122 5.212 12.054-11.076 21.828-28.016 37.791-53.426 51.148-17.266 9.122-35.183 12.38-53.1 10.1-14.66-1.955-26.062-8.47-33.23-19.222-10.424-15.963-11.401-33.23-2.605-50.496 6.19-12.38 15.962-21.502 22.152-26.063-1.303-4.235-3.258-11.402-4.235-16.614-47.237 34.207-42.35 80.468-28.016 102.295 10.75 16.29 32.577 26.389 56.684 26.389 6.515 0 13.03-.652 19.546-2.28 41.699-8.145 73.299-32.905 91.216-69.718zm57.336-40.397c-24.759-28.995-61.245-44.958-102.944-44.958h-5.212c-2.932-5.864-9.122-9.774-15.963-9.774h-.652C99.848 74.93 92.03 83.4 92.355 93.5c.326 9.773 8.47 17.592 18.243 17.592h.651c7.167-.326 13.357-4.887 15.963-11.077h5.864c24.759 0 48.214 7.167 69.39 21.176 16.288 10.751 28.016 24.76 34.531 41.7 5.538 13.683 5.212 27.04-.652 38.443-9.121 17.266-24.432 26.714-44.63 26.714-13.031 0-25.41-3.91-31.926-6.842-3.583 3.258-10.099 8.47-14.66 11.729 14.009 6.515 28.343 10.099 42.025 10.099 31.274 0 54.404-17.267 63.2-34.533 9.447-18.896 8.795-51.474-15.637-79.165zM69.225 175.27c.326 9.774 8.47 17.592 18.243 17.592h.652c10.099-.325 17.917-8.796 17.591-18.895-.325-9.774-8.47-17.592-18.243-17.592h-.651c-.652 0-1.63 0-2.28.325-13.357-22.153-18.895-46.26-16.94-72.323 1.302-19.547 7.818-36.488 19.22-50.497 9.447-12.054 27.69-17.918 40.07-18.243 34.531-.652 49.19 42.351 50.168 59.618 4.235.977 11.402 3.258 16.289 4.887C189.434 27.366 156.857 0 125.584 0c-29.32 0-56.359 21.176-67.11 52.451-14.985 41.7-5.212 81.771 13.031 113.372-1.628 2.28-2.606 5.864-2.28 9.448z"
+                    fill="#764ABC"
+                  />
+                </svg>
+              </span>
+              <span class="text-2xl text-gray-400 font-medium">Redux</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- portfolio -->
+    <div class="py-20 dark:bg-slate-900" id="portfolio">
+      <div class="container mx-auto">
+        <!-- top -->
+        <div class="flex flex-col gap-3 items-center">
+          <h2 class="text-amber-600 font-bold">PORTFOLIO</h2>
+          <h2 class="text-3xl dark:text-gray-50">Works and Projects</h2>
+          <p class="w-1/2 text-center text-gray-400">
+            Short-term objective, be able to join the Front-end team to create
+            more valuable websites. Long-term ambition to work as a Full-Stack
+            developer
+          </p>
+        </div>
+        <!-- bottom -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 p-5 sm:p-0 mx-auto"
+        >
+          <!-- cart -->
+          <div
+            class="group w-full m-1 shadow-xl my-3 md:my-5 h-60 rounded-lg relative overflow-hidden"
+          >
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/rQWecTayAJw"
+              title="Masterwork"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div
+              class="w-full h-1/4 bg-gray-700 absolute -bottom-32 group-hover:bottom-0 duration-500 flex items-center gap-3 justify-center"
+            >
+              <a
+                href="https://github.com/haitruongthanh/React_Mybnb"
+                target="_blank"
+                class="text-white font-light text-sm px-2 py-1 bg-amber-600 rounded-md hover:bg-amber-400 hover:scale-105"
+                >Source code</a
+              >
+              <a
+                href="https://react-mybnb.vercel.app/"
+                target="_blank"
+                class="text-white font-light text-sm px-2 py-1 bg-amber-600 rounded-md hover:bg-amber-400 hover:scale-105"
+                >Demo</a
+              >
+            </div>
+          </div>
+          <div
+            class="group w-full m-1 shadow-xl my-3 md:my-5 h-60 rounded-lg relative overflow-hidden"
+          >
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/75Wbv3VjHGQ"
+              title="Samar Delta"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div
+              class="w-full h-1/4 bg-gray-700 absolute -bottom-32 group-hover:bottom-0 duration-500 flex items-center gap-3 justify-center"
+            >
+              <a
+                href="https://github.com/haitruongthanh/samar"
+                target="_blank"
+                class="text-white font-light text-sm px-2 py-1 bg-amber-600 rounded-md hover:bg-amber-400 hover:scale-105"
+                >Source code</a
+              >
+              <a
+                href="https://samar-delta.vercel.app/"
+                target="_blank"
+                class="text-white font-light text-sm px-2 py-1 bg-amber-600 rounded-md hover:bg-amber-400 hover:scale-105"
+                >Demo</a
+              >
+            </div>
+          </div>
+          <div
+            class="group w-full m-1 shadow-xl my-3 md:my-5 h-60 rounded-lg relative overflow-hidden"
+          >
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/6UhagUyeYvs"
+              title="Masterwork"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div
+              class="w-full h-1/4 bg-gray-700 absolute -bottom-32 group-hover:bottom-0 duration-500 flex items-center gap-3 justify-center"
+            >
+              <a
+                href="https://gitlab.com/hai.truongthanh/bc03_team3_capstone1/-/tree/hai"
+                target="_blank"
+                class="text-white font-light text-sm px-2 py-1 bg-amber-600 rounded-md hover:bg-amber-400 hover:scale-105"
+                >Source code</a
+              >
+              <a
+                href="https://bc03-masterwork-1.vercel.app/"
+                target="_blank"
+                class="text-white font-light text-sm px-2 py-1 bg-amber-600 rounded-md hover:bg-amber-400 hover:scale-105"
+                >Demo</a
+              >
+            </div>
+          </div>
+          <div
+            class="group w-full m-1 shadow-xl my-3 md:my-5 h-60 rounded-lg relative overflow-hidden"
+          >
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/emck0OII1i8"
+              title="Masterwork"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div
+              class="w-full h-1/4 bg-gray-700 absolute -bottom-32 group-hover:bottom-0 duration-500 flex items-center gap-3 justify-center"
+            >
+              <a
+                href="https://github.com/haitruongthanh/BC02_MovieCapStone_3"
+                target="_blank"
+                class="text-white font-light text-sm px-2 py-1 bg-amber-600 rounded-md hover:bg-amber-400 hover:scale-105"
+                >Source code</a
+              >
+              <a
+                href="https://bc03-movie-clientview.vercel.app/"
+                target="_blank"
+                class="text-white font-light text-sm px-2 py-1 bg-amber-600 rounded-md hover:bg-amber-400 hover:scale-105"
+                >Demo</a
+              >
+            </div>
+          </div>
+          <div
+            class="group w-full m-1 shadow-xl my-3 md:my-5 h-60 rounded-lg relative overflow-hidden"
+          >
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/b_WZto2oHig"
+              title="Masterwork"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div
+              class="w-full h-1/4 bg-gray-700 absolute -bottom-32 group-hover:bottom-0 duration-500 flex items-center gap-3 justify-center"
+            >
+              <a
+                href="https://github.com/haitruongthanh/BC03-Capstone2-PhoneStore"
+                target="_blank"
+                class="text-white font-light text-sm px-2 py-1 bg-amber-600 rounded-md hover:bg-amber-400 hover:scale-105"
+                >Source code</a
+              >
+              <a
+                href="https://haitruongthanh.github.io/BC03-Capstone2-PhoneStore/"
+                target="_blank"
+                class="text-white font-light text-sm px-2 py-1 bg-amber-600 rounded-md hover:bg-amber-400 hover:scale-105"
+                >Demo</a
+              >
+            </div>
+          </div>
+          <div
+            class="group w-full m-1 shadow-xl my-3 md:my-5 h-60 rounded-lg relative overflow-hidden"
+          >
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/H2Tt6-qW_3s"
+              title="Masterwork"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+            <div
+              class="w-full h-1/4 bg-gray-700 absolute -bottom-32 group-hover:bottom-0 duration-500 flex items-center gap-3 justify-center"
+            >
+              <a
+                href="https://github.com/haitruongthanh/React_myFlix"
+                target="_blank"
+                class="text-white font-light text-sm px-2 py-1 bg-amber-600 rounded-md hover:bg-amber-400 hover:scale-105"
+                >Source code</a
+              >
+              <a
+                href="https://react-myflix.vercel.app/"
+                target="_blank"
+                class="text-white font-light text-sm px-2 py-1 bg-amber-600 rounded-md hover:bg-amber-400 hover:scale-105"
+                >Demo</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact -->
+    <div id="contact" class="dark:bg-slate-800 py-20">
+      <div class="container mx-auto">
+        <!-- top -->
+        <div class="flex flex-col gap-3 items-center">
+          <h2 class="text-amber-600 font-bold">CONTACT</h2>
+          <h2 class="text-3xl dark:text-gray-50">Hace a Question?</h2>
+          <p class="w-1/2 text-center text-gray-400">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+            quod?
+          </p>
+        </div>
+        <!-- bottom -->
+        <form action="" class="flex flex-col gap-5 items-center mt-5 p-8">
+          <input
+            class="p-2 w-full md:w-1/2 ring-1 ring-amber-300 rounded-sm dark:bg-slate-700 dark:ring-slate-400 dark:text-gray-50"
+            type="text"
+            placeholder="Name Surname"
+          />
+          <input
+            class="p-2 w-full md:w-1/2 ring-1 ring-amber-300 rounded-sm dark:bg-slate-700 dark:ring-slate-400 dark:text-gray-50"
+            type="email"
+            placeholder="Email"
+          />
+          <textarea
+            class="p-2 w-full md:w-1/2 ring-1 ring-amber-300 rounded-sm dark:bg-slate-700 dark:ring-slate-400 dark:text-gray-50"
+            cols="30"
+            rows="10"
+            placeholder="Message..."
+          >
+          </textarea>
+          <button
+            type="submit"
+            class="w-1/2 bg-amber-600 text-white font-medium px-3 py-2 cursor-pointer rounded-md"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="w-full bg-gray-800">
+      <div
+        class="container mx-auto py-5 px-3 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold">
+          <span class="mr-3 text-white drop-shadow-md"
+            ><i class="fa fa-jedi"></i>
+          </span>
+          <span class="text-white">truonghaidev</span>
+        </div>
+        <span class="hidden md:block font-medium text-white"
+          >© 2022 truonghaidev</span
+        >
+        <div class="flex gap-3">
+          <span
+            ><i class="fab fa-facebook-f cursor-pointer w-4 text-gray-50"></i
+          ></span>
+          <span
+            ><i class="fab fa-instagram cursor-pointer w-4 text-gray-50"></i
+          ></span>
+          <span
+            ><i class="fab fa-twitter cursor-pointer w-4 text-gray-50"></i
+          ></span>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+    <script src="./autoTyping.js"></script>
+  </body>
+</html>
